@@ -15,11 +15,11 @@ DRV8870::DRV8870(int motor_pin_1, int motor_pin_2, int motor_pin_3, int motor_pi
     pinMode(motor_pin_4, OUTPUT);
     this->_motor_count = 2;
 }
-void DRV8870::setMaxSpeed(int max_speed = 255)
+void DRV8870::setMaxSpeed(int max_speed)
 {
     this->max_speed = max_speed;
 }
-void DRV8870::setSpeed(int motor_speed, int direction = CLOCKWISE)
+void DRV8870::setSpeed(int motor_speed, int direction)
 {
     switch (this->_motor_count)
     {
@@ -62,7 +62,7 @@ void DRV8870::setSpeed(int motor_speed, int direction = CLOCKWISE)
         break;
     }
 }
-void DRV8870::brake(int mode = COAST)
+void DRV8870::brake(int mode)
 {
     if (mode == COAST)
     {

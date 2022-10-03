@@ -61,13 +61,13 @@ public:
      *
      * @param max_speed The maximum speed value for an analogWrite(value);
      */
-    void setMaxSpeed(int max_speed = 255);
+    void setMaxSpeed(int max_speed);
 
     /** Set the speed of the motor
      *
      * @param motor_speed The speed of the motor as a normalised value between 0 and max_speed
      */
-    void setSpeed(int motor_speed, int direction = CLOCKWISE);
+    void setSpeed(int motor_speed, int direction);
 
     /** Brake the H-bridge coast or brake.
      *
@@ -75,7 +75,7 @@ public:
      * @param mode - Braking mode.COAST(default)or BRAKE.
      *
      */
-    void brake(int mode = COAST);
+    void brake(int mode);
 
     /** Returns the version of the library
      *
