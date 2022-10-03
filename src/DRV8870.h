@@ -24,7 +24,7 @@ class DRV8870
 {
 private:
     // The library version number
-    int version = 1;
+    int _version = 1;
 
     // The maximum value for an analogWrite(pin, value). This varies from board to board
     int max_speed = 255;

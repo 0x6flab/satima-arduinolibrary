@@ -103,5 +103,5 @@ void DRV8870::brake(int mode = COAST)
 }
 int DRV8870::version(void)
 {
-    return 1;
+    return _version;
 }
