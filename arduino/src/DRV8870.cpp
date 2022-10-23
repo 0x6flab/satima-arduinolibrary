@@ -1,5 +1,4 @@
 #include "DRV8870.h"
-#include "Arduino.h"
 
 DRV8870::DRV8870(int motor_pin_1, int motor_pin_2)
 {
@@ -15,7 +14,7 @@ DRV8870::DRV8870(int motor_pin_1, int motor_pin_2, int motor_pin_3, int motor_pi
     this->_motor_pin_1 = motor_pin_1;
     this->_motor_pin_2 = motor_pin_2;
     this->_motor_pin_3 = motor_pin_3;
-    this->_motor_pin_4 = motor_pin_4;        
+    this->_motor_pin_4 = motor_pin_4;
     pinMode(this->_motor_pin_1, OUTPUT);
     pinMode(this->_motor_pin_2, OUTPUT);
     pinMode(this->_motor_pin_3, OUTPUT);

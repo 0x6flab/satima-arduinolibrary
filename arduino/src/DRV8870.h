@@ -4,7 +4,7 @@
  * Original library        (1.0.0)   by Rodney Osodo.
  *
  * The moded the DRV8870 motor driver can run are listed below:
- * 
+ *
  *    x_PWM1 x_PWM2    Mode
  *      0      0       Coast/Fast decay
  *      0      1       Reverse
@@ -20,6 +20,14 @@
 #define CLOCKWISE 1
 #define COUNTERCLOCKWISE 0
 
+#include "Arduino.h"
+#if defined(ESP32)
+#include <analogWrite.h>
+#endif
+#if defined(ESP8266)
+#include <analogWrite.h>
+#endif
+
 class DRV8870
 {
 private:
@@ -34,7 +42,7 @@ private:
     int _motor_pin_2;
     int _motor_pin_3;
     int _motor_pin_4;
-    
+
     // Motor count
     int _motor_count;
 
