@@ -33,11 +33,11 @@ void DRV8870::setSpeed(int motor_speed, int direction)
         {
         case CLOCKWISE:
             analogWrite(this->_motor_pin_1, motor_speed);
-            analogWrite(this->_motor_pin_1, 0);
+            analogWrite(this->_motor_pin_2, 0);
             break;
         case COUNTERCLOCKWISE:
             analogWrite(this->_motor_pin_1, 0);
-            analogWrite(this->_motor_pin_1, motor_speed);
+            analogWrite(this->_motor_pin_2, motor_speed);
             break;
         default:
             break;
