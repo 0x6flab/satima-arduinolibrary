@@ -1,10 +1,10 @@
-#include <DRV8870.h>
+#include "DRV8870.h"
 
-// Pin 10 ENA is tied to HIGH
-// Pin 8 is IN1
-// Pin 9 is IN2
-#define EN_PIN 10
-DRV8870 mymotor(8, 9);
+// Pin PB14 ENA is tied to HIGH
+// Pin PB12 is IN1
+// Pin PB13 is IN2
+#define EN_PIN PB14
+DRV8870 mymotor(PB12, PB13);
 
 void setup()
 {
